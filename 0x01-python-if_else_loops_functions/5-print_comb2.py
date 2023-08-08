@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 for i in range(99):
-    print("{0:02}".format(i), end=", ")
-print(f"{0:0}".format(i))
+    print("{:02d}".format(i), end=", ")
+print("{:d}".format(i+1))
