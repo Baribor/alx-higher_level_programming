@@ -9,3 +9,5 @@ def uppercase(str):
             print("{}".format(chr(65 + (ord(c) - 97))), end=end_char)
             continue
         print("{}".format(c), end="" if i < s - 1 else "\n")
+    if s == 0:
+        print(str)
