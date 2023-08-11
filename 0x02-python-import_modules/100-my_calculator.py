@@ -2,7 +2,7 @@
 
 if __name__ == "__main__":
     import sys
-    from test.calculator_1 import add, sub, mul, div
+    from calculator_1 import add, sub, mul, div
 
     args = sys.argv[1:]
 
