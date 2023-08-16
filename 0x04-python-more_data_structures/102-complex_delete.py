@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-def complex_delete(a_dictionary: dict, value):
-    if not a_dictionary or not isinstance(a_dictionary, dict):
-        return
+def complex_delete(a_dictionary, value):
+    keys_to_remove = []
 
-    keys = [k if v == value else None for k, v in a_dictionary.items()]
-    for k in keys:
-        if k:
-            a_dictionary.pop(k)
-    return dict(a_dictionary)
+    for k, v in a_dictionary.items():
+        if v == value:
+            keys_to_remove.append(k)
+    for k in keys_to_remove:
+        del a_dictionary[k]
+    return a_dictionary
 
 
 if __name__ == '__main__':
