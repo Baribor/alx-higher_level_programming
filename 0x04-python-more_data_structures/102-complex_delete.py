@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def complex_delete(a_dictionary: dict, value):
-    if not a_dictionary:
+    if not a_dictionary or not isinstance(a_dictionary, dict):
         return
 
     keys = [k if v == value else None for k, v in a_dictionary.items()]
