@@ -1,8 +1,18 @@
 #!/usr/bin/python3
+"""This module contains a `square class`
+"""
+
 
 class Square:
+    """The Square class
+    """
 
     def __init__(self, size):
+        """Initializes the class instance
+
+        Args:
+            size (int): The size of the square
+        """
         self.__size = size
 
 
