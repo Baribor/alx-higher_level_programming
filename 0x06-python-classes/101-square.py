@@ -78,23 +78,35 @@ class Square:
     def my_print(self):
         """Prints the square
         """
-        print(end='\n' * self.position[1])
         if self.size == 0:
-            print(' ' * self.position[0])
+            print()
+            return
 
-        for i in range(self.size):
+        print(end='\n' * self.position[1])
+
+        for _ in range(self.size):
             print(f"{' ' * self.position[0]}{'#' * self.size}")
-            
+
     def __str__(self) -> str:
-        self.my_print()
-        return ""
+        """The str rep of the Square
+
+        Returns:
+            str: The string rep of the Square
+        """
+        rep = []
+        if self.size == 0:
+            return ""
+        rep.append('\n' * (self.position[1] - 1))
+        for _ in range(self.size):
+            rep.append(f"{' ' * self.position[0]}{'#' * self.size}")
+        return '\n'.join(rep)
 
 
 if __name__ == '__main__':
-	my_square = Square(5, (0, 0))
-	print(my_square)
+    my_square = Square(5, (0, 0))
+    print(my_square)
 
-	print("--")
+    print("--")
 
-	my_square = Square(5, (4, 1))
-	print(my_square)
+    my_square = Square(5, (4, 1))
+    print(my_square)
