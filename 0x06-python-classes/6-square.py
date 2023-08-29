@@ -2,11 +2,11 @@
 
 class Square:
 
-    def __init__(self, size=0, position=(0, 0)) -> None:
+    def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
 
-    def area(self) -> int:
+    def area(self):
         return self.__size ** 2
 
     @property
