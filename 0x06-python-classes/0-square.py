@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""This module contains a `square class`
+"""
+
 
 class Square:
-    def __init__(self):
-        pass
+    """The square class
+    """
+    pass
 
 
 if __name__ == "__main__":
