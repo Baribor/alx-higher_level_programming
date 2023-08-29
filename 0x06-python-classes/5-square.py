@@ -24,10 +24,8 @@ class Square:
         if self.size == 0:
             print()
 
-        for i in range(self.size ** 2):
-            print("#", end="")
-            if i % self.size == self.size - 1:
-                print()
+        for i in range(self.size):
+            print(f"{'#' * self.size}")
 
 
 if __name__ == '__main__':
