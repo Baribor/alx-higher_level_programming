@@ -4,7 +4,7 @@ This module contains a function that adds two integers
 """
 
 
-def add_integer(a, b) -> int:
+def add_integer(a, b=98) -> int:
     """Adds two numbers
 
     Args:
