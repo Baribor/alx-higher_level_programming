@@ -1,8 +1,24 @@
+#!/usr/bin/python3
+"""
+The `rectangle` module.
+This module defines the Rectangle class
+"""
 from .base import Base
 
 
 class Rectangle(Base):
+    """The Rectangle class"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
+        """class constructor
+
+        Args:
+            width (int): width  of the rect
+            height (int): height of the rect
+            x (int, int): x coord. Defaults to 0.
+            y (int, int): y cord. Defaults to 0.
+            id (int, optional): rect id. Defaults to None.
+        """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -11,6 +27,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """width of the rect"""
         return self.__width
 
     @width.setter
@@ -24,6 +41,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """height of the rect"""
         return self.__height
 
     @height.setter
@@ -36,6 +54,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """x coordinate"""
         return self.__x
 
     @x.setter
@@ -48,6 +67,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """y coordinate"""
         return self.__y
 
     @y.setter
@@ -59,19 +79,27 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
+        """computes the area of the rectangle
+
+        Returns:
+            int: the area
+        """
         return self.width * self.height
 
     def display(self):
+        """Prints the rectangle"""
         print("\n" * self.y, end='')
         for _ in range(self.height):
             print(f"{' '*self.x}{'#' * self.width}")
 
     def __str__(self):
+        """str rep of the rectangle"""
         return f'[Rectangle] ({self.id}) {self.x}/{self.y} \
-            - {self.width}/{self.height}'
+- {self.width}/{self.height}'
 
     def update(self, *args, **kwargs):
-
+        """updates the rectangle
+        """
         length = len(args)
         if (length > 0):
             if length > 0:
@@ -101,6 +129,11 @@ class Rectangle(Base):
                 self.height = kwargs['height']
 
     def to_dictionary(self):
+        """returns the dict rep of the rect
+
+        Returns:
+            dict: the dict rep of the rect
+        """
         return {
             'id': self.id,
             'x': self.x,

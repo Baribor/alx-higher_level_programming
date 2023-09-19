@@ -1,4 +1,4 @@
-#!/usr/bin/pythono3
+#!/usr/bin/python3
 """
 The `square` module.
 This module defines a Square class
@@ -8,7 +8,7 @@ from .rectangle import Rectangle
 
 class Square(Rectangle):
     """The Rectangle class"""
-    
+
     def __init__(self, size, x=0, y=0, id=None):
         """class constructor
 
@@ -19,7 +19,7 @@ class Square(Rectangle):
             id (_type_, optional): id of the square. Defaults to None.
         """
         super().__init__(height=size, width=size, x=x, y=y, id=id)
-        
+
     def __str__(self):
         """str rep
 
@@ -27,17 +27,17 @@ class Square(Rectangle):
             str: The rep of the square instance
         """
         return f'[Square] ({self.id}) {self.x}/{self.y} - {self.width}'
-    
+
     @property
     def size(self):
         """Size of the square"""
         return self.height
-    
+
     @size.setter
     def size(self, s):
         self.width = s
         self.height = s
-        
+
     def update(self, *args, **kwargs):
         """Updates the fields in the square
         """
@@ -52,10 +52,10 @@ class Square(Rectangle):
             if length > 3:
                 self.y = args[3]
         else:
-            if(kwargs.get('size')):
+            if kwargs.get('size'):
                 self.size = kwargs['size']
             super().update(*args, **kwargs)
-            
+
     def to_dictionary(self):
         """converts the square to a dictionary
 
